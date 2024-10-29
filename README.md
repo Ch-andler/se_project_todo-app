@@ -1,14 +1,14 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+This simple TODO app was created to provide a simple user-friendly solution to a to do list.
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+You can add new TODO's, check off completed ones, or delete them.
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+Most of this apps functionality is based on Javascript. There are multiple event listeners to add or remove the to-dos and to have the counter function properly.
 
 ## Deployment
 
