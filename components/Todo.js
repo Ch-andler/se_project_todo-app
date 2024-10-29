@@ -10,7 +10,7 @@ class Todo {
 
   _setEventListeners() {
     this._todoCheckboxEl.addEventListener("change", () => {
-      this._data.completed = !this._data.completed;
+      this._completed = !this._completed;
       this._handleCheck(this._completed);
     });
 
