@@ -1,7 +1,6 @@
 class Popup {
   constructor({ popupSelector }) {
     this._popupElement = document.querySelector(popupSelector);
-    this._popupCloseBtn = this._popupElement.querySelector(".popup__close");
   }
 
   _handleEscapeClose = (evt) => {
@@ -18,13 +17,6 @@ class Popup {
   close() {
     this._popupElement.classList.remove("popup_visible");
     document.removeEventListener("keyup", this._handleEscapeClose);
-  }
-
-  setEventListeners() {
-    this._popupCloseBtn.addEventListener("click", () => {
-      console.log("closed");
-      this.close();
-    });
   }
 
   setEventListeners() {

@@ -43,6 +43,7 @@ const addTodoPopup = new PopupWithForm({
     const values = { name, date, id };
     const todo = generateTodo(values);
     section.addItem(todo);
+    handleAddTodo();
 
     newTodoValidator.resetValidation();
 
@@ -53,19 +54,11 @@ const addTodoPopup = new PopupWithForm({
 const section = new Section({
   items: initialTodos,
   renderer: (item) => {
-    const renderElement = generateTodo(item);
-    section.addItem(renderElement);
+    const renderTodo = generateTodo(item);
+    section.addItem(renderTodo);
   },
   containerSelector: ".todos__list",
 });
-
-/* const openModal = (modal) => {
-  modal.classList.add("popup_visible");
-};
-
-const closeModal = (modal) => {
-  modal.classList.remove("popup_visible");
-}; */
 
 const generateTodo = (data) => {
   const todo = new Todo(
@@ -83,9 +76,6 @@ addTodoButton.addEventListener("click", () => {
   addTodoPopup.open();
 });
 
-addTodoCloseBtn.addEventListener("click", () => {
-  addTodoPopup.close();
-});
 addTodoPopup.setEventListeners();
 
 const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
